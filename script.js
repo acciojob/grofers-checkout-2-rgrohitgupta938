@@ -1,27 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("ji");
-  function calculateTotal() {
-    const priceElements = document.querySelectorAll('[data-ns-test="price"]');
-    console.log(priceElements);
-    let total = 0;
-
-    priceElements.forEach((priceElement) => {
-      const price = parseFloat(priceElement.textContent);
-      if (!isNaN(price)) {
-      total += price;
-    }
-    });
-
-    return total;
-  }
-
-  function updateTotal() {
-    const grandTotalElement = document.querySelector(
-      '[data-ns-test="grandTotal"]'
-    );
-    const total = calculateTotal();
-    grandTotalElement.textContent += total;
-  }
-
-  updateTotal();
-});
+const priceArray=document.querySelectorAll('[data-ns-test="price"]');
+let table=document.getElementById("table1");
+let ans=0;
+for (let i = 0; i < priceArray.length; i++) {
+	ans+=parseInt(priceArray[i].innerText);
+}
+let total=document.createElement("tr");
+ 
+total.setAttribute("data-ns-test", "grandTotal");
+ 
+total.innerText=ans;
+ 
+table.appendChild(total);
