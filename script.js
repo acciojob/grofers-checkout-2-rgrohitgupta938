@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     priceElements.forEach((priceElement) => {
       const price = parseFloat(priceElement.textContent);
+      if (!isNaN(price)) {
       total += price;
+    }
     });
 
     return total.toFixed(2);
