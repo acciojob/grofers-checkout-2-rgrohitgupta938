@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let total = 0;
 
     priceElements.forEach((priceElement) => {
-      const price = parseFloat(priceElement.textContent);
+      const price = parseInt(priceElement.textContent);
       if (!isNaN(price)) {
       total += price;
     }
     });
 
-    return total.toFixed(2);
+    return total;
   }
 
   function updateTotal() {
