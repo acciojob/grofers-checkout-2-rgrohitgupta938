@@ -1,8 +1,8 @@
-//your code here
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("ji");
   function calculateTotal() {
     const priceElements = document.querySelectorAll('[data-ns-test="prices"]');
-
+    console.log(priceElements);
     let total = 0;
 
     priceElements.forEach((priceElement) => {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       '[data-ns-test="grandTotal"]'
     );
     const total = calculateTotal();
-    grandTotalElement.textContent = total;
+    grandTotalElement.textContent += total;
   }
 
   updateTotal();
