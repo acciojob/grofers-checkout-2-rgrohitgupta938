@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("ji");
   function calculateTotal() {
-    const priceElements = document.querySelectorAll('[data-ns-test="prices"]');
+    const priceElements = document.querySelectorAll('[data-ns-test="price"]');
     console.log(priceElements);
     let total = 0;
 
